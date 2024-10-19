@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* CSS เพื่อจัดตำแหน่งให้อยู่ตรงกลาง */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            border: 2px solid #ccc;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 15px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            display: block;
+            margin-bottom: 40px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "vetlab" && password === "vetlab1234") {
+                window.location.href = "https://forms.gle/cQ1R87P5LokwzPDs6"; // ลิงก์ Google Form ของคุณ
+            } else {
+                alert("Username หรือ Password ไม่ถูกต้อง");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Container เพื่อจัดให้อยู่ตรงกลาง -->
+    <div class="container">
+        <!-- รูปภาพ -->
+        <img src="https://upload.wikimedia.org/wikipedia/th/thumb/4/43/VET_MSU_LOGO.svg/190px-VET_MSU_LOGO.svg.png" alt="Logo">
+
+        <h2>ระบบจองเวลาใช้เครื่องมือห้องปฏิบัติการ</h2>
+
+        <!-- ลิงก์สำหรับดู Google Calendar ที่เปิดในแท็บใหม่ -->
+        <a href="https://calendar.google.com/calendar/embed?src=your_calendar_id@gmail.com&ctz=Asia%2FBangkok" target="_blank">
+            ดูข้อมูลการจองใน Google Calendar
+        </a>
+
+        <!-- ฟอร์มล็อกอิน -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <button onclick="login()">Login</button>
+    </div>
+
+</body>
+</html>
